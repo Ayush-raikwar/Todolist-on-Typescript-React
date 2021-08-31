@@ -6,7 +6,10 @@ import CreateArea from "./CreateArea";
 import { Navbar } from './Navbar';
 import { useState } from 'react';
 import { Modal } from './Modal';
-import { utimesSync } from 'fs';
+import {Route, BrowserRouter as Router } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Tabs, Tab, Row, Button, Col, Form, Card, Container} from "react-bootstrap";
+
 const App =() => {
   const popupRef:any = useRef();
   const [notes, setNotes] = useState<any[]>([])
