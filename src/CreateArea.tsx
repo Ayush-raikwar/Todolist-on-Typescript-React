@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import styled from 'styled-components';
 interface Types{
   title:string;
   content:string
@@ -35,9 +35,30 @@ function CreateArea(props:any) {
     })
   }
 
+  const AddButton = styled.button`
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: brown;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+
+  &:hover{
+      border:2px solid rgb(255, 136, 136);
+      transition: border 0.05s;
+      }
+  `;
+
+
   return (
     <div id='cA'>
-      <form>
+      <form> 
         <input id='create-area'
           name="title"
           onChange={handleChange}
@@ -51,7 +72,9 @@ function CreateArea(props:any) {
           value={note.content}
           
         />
-        <button className='add-btn' onClick={submitNote}>Add</button>
+
+        <AddButton className='add-btn' onClick={submitNote}>Add</AddButton>
+        
       </form>
     </div>
   );

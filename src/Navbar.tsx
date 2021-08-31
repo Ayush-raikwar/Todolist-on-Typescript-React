@@ -27,7 +27,7 @@ export function Navbar(){
             <ul className="nav-ul" id="nav-ul">
                 <li><a><Link to="/">Home</Link></a></li>
                 <li><a><Link to="/about">About</Link></a></li>
-                <li><a>Contact</a></li>
+                <li><a><Link to="/contact">Contact</Link></a></li>
             </ul>
         </div>
         
